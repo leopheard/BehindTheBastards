@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.behindthebastards" name="Behind The Bastards" version="1.0.0" provider-name="leopheard">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.1"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.routing" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>en_us</language>
+    <summary lang="en">Behind The Bastards</summary>
+    <description lang="en">There’s a reason the History Channel has produced hundreds of documentaries about Hitler but only a few about Dwight D. Eisenhower. Bad guys (and gals) are eternally fascinating. Behind the Bastards dives in past the Cliffs Notes of the worst humans in history and exposes the bizarre realities of their lives. Listeners will learn about the young adult novels that helped Hitler form his monstrous ideology, the founder of Blackwater’s insane quest to build his own Air Force, the bizarre lives of the sons and daughters of dictators and Saddam Hussein’s side career as a trashy romance novelist.</description>
+    <license>The MIT License (MIT)</license>
+    <forum></forum>
+    <email>leopheard@gmail.com</email>
+    <source>https://github.com/leopheard/BehindTheBastards</source>
+    <website>https://www.behindthebastards.com/</website>
+        	<assets>
+			<icon>resources/media/icon.jpg</icon>
+			<fanart>resources/media/fanart.jpg</fanart>
+			<screenshot>resources/media/icon.jpg</screenshot>
+			<screenshot>resources/media/icon.jpg</screenshot>
+			<screenshot>resources/media/icon.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>
