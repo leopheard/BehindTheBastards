@@ -10,21 +10,21 @@ def get_soup1(url1):
 
 def get_playable_podcast1(soup1):
     subjects = []
-    for content in soup1.find_all('item', limit=9):
+    for content in soup1.find_all('item', limit=16):
         try:
             link = content.find('enclosure')
             link = link.get('url')
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://images.megaphone.fm/s514lBJDILp6AngqWH82ts0Y42JjWZc0dehAWt2vlz4/plain/s3://megaphone-prod/podcasts/22c36480-3778-11e8-806d-cfb84f1d0648/image/uploads_2F1547069138516-4edafwuejvc-14cc4c048140986ac2bacd6b0e0f022d_2FBehindTheBastards-Logo-iHR-FINAL-3000x3000.jpg",
         }
         subjects.append(item)
     return subjects
@@ -48,14 +48,14 @@ def get_playable_podcast(soup1):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://images.megaphone.fm/s514lBJDILp6AngqWH82ts0Y42JjWZc0dehAWt2vlz4/plain/s3://megaphone-prod/podcasts/22c36480-3778-11e8-806d-cfb84f1d0648/image/uploads_2F1547069138516-4edafwuejvc-14cc4c048140986ac2bacd6b0e0f022d_2FBehindTheBastards-Logo-iHR-FINAL-3000x3000.jpg",
         }
         subjects.append(item)
     return subjects
